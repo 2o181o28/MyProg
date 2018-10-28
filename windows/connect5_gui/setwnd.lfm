@@ -1,0 +1,113 @@
+object Form2: TForm2
+  Left = 493
+  Height = 240
+  Top = 276
+  Width = 320
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Connect5 设置'
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '1.6.4.0'
+  object aiLevel: TRadioGroup
+    Left = 10
+    Height = 78
+    Top = 10
+    Width = 297
+    AutoFill = True
+    Caption = '程序智能水平'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 5
+    ClientHeight = 56
+    ClientWidth = 293
+    Columns = 5
+    ItemIndex = 2
+    Items.Strings = (
+      '不限时计算'
+      '最低'
+      '较低'
+      '较高'
+      '最高'
+      '自定义时间：'
+    )
+    OnClick = aiLevelClick
+    TabOrder = 0
+  end
+  object hashsize: TRadioGroup
+    Left = 10
+    Height = 48
+    Top = 104
+    Width = 297
+    AutoFill = True
+    Caption = '哈希表大小'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 3
+    ClientHeight = 26
+    ClientWidth = 293
+    Columns = 3
+    ItemIndex = 1
+    Items.Strings = (
+      '小'
+      '中'
+      '大'
+    )
+    OnClick = hashsizeClick
+    TabOrder = 1
+  end
+  object shoushun: TCheckBox
+    Left = 16
+    Height = 21
+    Top = 160
+    Width = 106
+    Caption = '显示落子的手顺'
+    Checked = True
+    OnChange = shoushunChange
+    State = cbChecked
+    TabOrder = 2
+  end
+  object quit: TButton
+    Left = 56
+    Height = 25
+    Top = 192
+    Width = 75
+    Caption = '确定'
+    OnClick = quitClick
+    TabOrder = 3
+  end
+  object cancelquit: TButton
+    Left = 184
+    Height = 25
+    Top = 192
+    Width = 75
+    Caption = '取消'
+    OnClick = cancelquitClick
+    TabOrder = 4
+  end
+  object time: TEdit
+    Left = 112
+    Height = 25
+    Top = 60
+    Width = 64
+    Enabled = False
+    TabOrder = 5
+    Text = '10000'
+  end
+  object Label1: TLabel
+    Left = 180
+    Height = 17
+    Top = 64
+    Width = 24
+    Caption = '毫秒'
+    ParentColor = False
+  end
+end

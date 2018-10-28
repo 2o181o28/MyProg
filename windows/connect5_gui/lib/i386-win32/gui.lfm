@@ -1,0 +1,141 @@
+object Form1: TForm1
+  Left = 275
+  Height = 480
+  Top = 146
+  Width = 800
+  HorzScrollBar.Page = 795
+  HorzScrollBar.Range = 795
+  VertScrollBar.Page = 475
+  VertScrollBar.Range = 475
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Connect5'
+  ClientHeight = 480
+  ClientWidth = 800
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  LCLVersion = '1.6.4.0'
+  object log: TMemo
+    Left = 480
+    Height = 400
+    Top = 5
+    Width = 315
+    Lines.Strings = (
+      'Connect5，一个弱爆了的五子棋AI（未完成）'
+      ''
+      ''
+    )
+    ReadOnly = True
+    ScrollBars = ssVertical
+    TabOrder = 0
+  end
+  object load: TButton
+    Left = 544
+    Height = 25
+    Top = 448
+    Width = 59
+    Caption = '导入'
+    OnClick = loadClick
+    TabOrder = 1
+  end
+  object save: TButton
+    Left = 608
+    Height = 25
+    Top = 448
+    Width = 59
+    Caption = '保存'
+    OnClick = saveClick
+    TabOrder = 2
+  end
+  object undo: TButton
+    Left = 544
+    Height = 25
+    Top = 416
+    Width = 59
+    Caption = '撤销'
+    OnClick = undoClick
+    TabOrder = 3
+  end
+  object redo: TButton
+    Left = 608
+    Height = 25
+    Top = 416
+    Width = 59
+    Caption = '重做'
+    OnClick = redoClick
+    TabOrder = 4
+  end
+  object help: TButton
+    Left = 672
+    Height = 25
+    Top = 416
+    Width = 59
+    Caption = '提示'
+    OnClick = helpClick
+    TabOrder = 5
+  end
+  object newgame: TButton
+    Left = 480
+    Height = 25
+    Top = 448
+    Width = 59
+    Caption = '新局'
+    OnClick = newgameClick
+    TabOrder = 6
+  end
+  object quit: TButton
+    Left = 736
+    Height = 25
+    Top = 448
+    Width = 59
+    Caption = '退出'
+    OnClick = quitClick
+    TabOrder = 7
+  end
+  object setup: TButton
+    Left = 736
+    Height = 25
+    Top = 416
+    Width = 59
+    Caption = '设置'
+    OnClick = setupClick
+    TabOrder = 8
+  end
+  object board: TImage
+    Left = 5
+    Height = 470
+    Top = 5
+    Width = 470
+    OnMouseUp = boardMouseUp
+  end
+  object stop: TButton
+    Left = 480
+    Height = 25
+    Top = 416
+    Width = 59
+    Caption = '停止'
+    OnClick = stopClick
+    TabOrder = 9
+  end
+  object about: TButton
+    Left = 672
+    Height = 25
+    Top = 448
+    Width = 59
+    Caption = '关于'
+    OnClick = aboutClick
+    TabOrder = 10
+  end
+  object opendlg: TOpenDialog
+    Title = '打开棋局'
+    Filter = 'Connect 5保存棋局文件(*.c5f)|*.c5f'
+    left = 560
+    top = 448
+  end
+  object savedlg: TSaveDialog
+    Title = '保存当前棋局'
+    Filter = 'Connect 5保存棋局文件(*.c5f)|*.c5f'
+    left = 624
+    top = 448
+  end
+end

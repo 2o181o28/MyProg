@@ -1,0 +1,19 @@
+object Form1: TForm1
+  Left = 275
+  Height = 480
+  Top = 146
+  Width = 640
+  Caption = 'Burning Ship Fractal'
+  ClientHeight = 480
+  ClientWidth = 640
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
+  LCLVersion = '1.6.4.0'
+  object Graph: TImage
+    Left = 0
+    Height = 480
+    Top = 0
+    Width = 640
+  end
+end

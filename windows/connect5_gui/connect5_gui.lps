@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="37">
+      <Unit0>
+        <Filename Value="connect5_gui.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="21" Y="10"/>
+        <UsageCount Value="51"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="gui.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="193"/>
+        <CursorPos X="25" Y="213"/>
+        <UsageCount Value="51"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="setwnd.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="54"/>
+        <CursorPos X="37" Y="64"/>
+        <UsageCount Value="46"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="G:\t1.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="47"/>
+        <CursorPos X="42" Y="59"/>
+        <UsageCount Value="9"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="G:\pi.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="9"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="G:\connect5.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="18" Y="13"/>
+        <UsageCount Value="9"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="G:\normal\connect5\connect5.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="489"/>
+        <CursorPos X="12" Y="502"/>
+        <UsageCount Value="9"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="F:\connect5.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="61" Y="20"/>
+        <UsageCount Value="9"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="F:\lazarus\fpc\3.0.0\source\rtl\inc\systemh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="693"/>
+        <CursorPos X="3" Y="707"/>
+        <UsageCount Value="9"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\normal\connect5\backup\connect5_ver_2016_12_20.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="18" Y="10"/>
+        <UsageCount Value="9"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\..\normal\connect5\backup\connect5_ver_2016_11_12.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="9"/>
+        <UsageCount Value="9"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="E:\Users\wei\AppData\Local\Temp\Rar$DI02.125\bestgomoku.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="19" Y="25"/>
+        <UsageCount Value="9"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="..\..\参考文件\display.pp"/>
+        <UnitName Value="Display"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="F:\pi.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="304"/>
+        <CursorPos X="7" Y="326"/>
+        <UsageCount Value="9"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="F:\1.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="3" Y="5"/>
+        <UsageCount Value="9"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="C:\1.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="140"/>
+        <CursorPos X="15" Y="155"/>
+        <UsageCount Value="10"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="F:\dly temp\1.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="9"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="F:\dly temp\mohu.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="8"/>
+        <CursorPos X="6" Y="24"/>
+        <UsageCount Value="9"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="F:\dly temp\VCTchecker.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="151"/>
+        <CursorPos X="43" Y="173"/>
+        <UsageCount Value="9"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="gui.lfm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="..\..\normal\connect5\VCTchecker.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="170"/>
+        <CursorPos X="16" Y="195"/>
+        <UsageCount Value="9"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="..\..\normal\connect5\connect5.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="286"/>
+        <CursorPos X="41" Y="297"/>
+        <UsageCount Value="9"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="..\sound.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="32"/>
+        <CursorPos X="20" Y="33"/>
+        <UsageCount Value="9"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="..\sound\sound.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="28"/>
+        <UsageCount Value="10"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="C:\Documents and Settings\user\My Documents\Downloads\VCTchecker.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos Y="30"/>
+        <UsageCount Value="9"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="connect5_gui.lpi.bak"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="28"/>
+        <CursorPos X="34" Y="37"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="E:\Users\wei\Downloads\t2.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="17"/>
+        <CursorPos X="64" Y="30"/>
+        <UsageCount Value="9"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="D:\1.pp"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="5" Y="14"/>
+        <UsageCount Value="10"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="D:\123.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="603"/>
+        <CursorPos X="9" Y="612"/>
+        <UsageCount Value="10"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="..\..\test\t11.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="9" Y="35"/>
+        <UsageCount Value="10"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="..\..\test\1.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="22"/>
+        <UsageCount Value="10"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="D:\gameoflife.pas"/>
+        <UnitName Value="GameOfLife"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="46"/>
+        <UsageCount Value="10"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="..\..\normal\fenci\t2.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="126"/>
+        <CursorPos X="35" Y="133"/>
+        <UsageCount Value="10"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="..\..\normal\eqsolver\eqsolver.pas"/>
+        <UnitName Value="EquationSolver"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="27"/>
+        <CursorPos X="26" Y="3"/>
+        <UsageCount Value="10"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="..\..\normal\fenci\fenci.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="100"/>
+        <CursorPos X="18" Y="117"/>
+        <UsageCount Value="10"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="..\..\参考文件\M67\fact.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="..\WinBase.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="29"/>
+        <CursorPos X="21" Y="22"/>
+        <UsageCount Value="10"/>
+      </Unit36>
+    </Units>
+    <JumpHistory Count="27" HistoryIndex="26">
+      <Position1>
+        <Filename Value="gui.pas"/>
+        <Caret Line="213" Column="47" TopLine="201"/>
+      </Position1>
+      <Position2>
+        <Filename Value="gui.pas"/>
+        <Caret Line="156" Column="15" TopLine="140"/>
+      </Position2>
+      <Position3>
+        <Filename Value="gui.pas"/>
+        <Caret Line="155" Column="34" TopLine="137"/>
+      </Position3>
+      <Position4>
+        <Filename Value="gui.pas"/>
+        <Caret Line="224" Column="41" TopLine="204"/>
+      </Position4>
+      <Position5>
+        <Filename Value="gui.pas"/>
+        <Caret Line="271" Column="18" TopLine="231"/>
+      </Position5>
+      <Position6>
+        <Filename Value="gui.pas"/>
+        <Caret Line="241" Column="51" TopLine="222"/>
+      </Position6>
+      <Position7>
+        <Filename Value="gui.pas"/>
+        <Caret Line="138" Column="26" TopLine="38"/>
+      </Position7>
+      <Position8>
+        <Filename Value="gui.pas"/>
+        <Caret Line="371" Column="24" TopLine="346"/>
+      </Position8>
+      <Position9>
+        <Filename Value="gui.pas"/>
+      </Position9>
+      <Position10>
+        <Filename Value="gui.pas"/>
+        <Caret Line="138" Column="34" TopLine="107"/>
+      </Position10>
+      <Position11>
+        <Filename Value="gui.pas"/>
+        <Caret Line="66" Column="21" TopLine="46"/>
+      </Position11>
+      <Position12>
+        <Filename Value="setwnd.pas"/>
+        <Caret Line="65" Column="30" TopLine="48"/>
+      </Position12>
+      <Position13>
+        <Filename Value="setwnd.pas"/>
+        <Caret Line="66" Column="30" TopLine="49"/>
+      </Position13>
+      <Position14>
+        <Filename Value="setwnd.pas"/>
+        <Caret Line="67" Column="30" TopLine="50"/>
+      </Position14>
+      <Position15>
+        <Filename Value="setwnd.pas"/>
+        <Caret Line="66" Column="30" TopLine="49"/>
+      </Position15>
+      <Position16>
+        <Filename Value="gui.pas"/>
+        <Caret Line="248" Column="11" TopLine="224"/>
+      </Position16>
+      <Position17>
+        <Filename Value="gui.pas"/>
+        <Caret Line="33" Column="53" TopLine="17"/>
+      </Position17>
+      <Position18>
+        <Filename Value="setwnd.pas"/>
+        <Caret Line="76" Column="22" TopLine="55"/>
+      </Position18>
+      <Position19>
+        <Filename Value="setwnd.pas"/>
+        <Caret Line="48" Column="16" TopLine="34"/>
+      </Position19>
+      <Position20>
+        <Filename Value="setwnd.pas"/>
+        <Caret Line="55" Column="34" TopLine="35"/>
+      </Position20>
+      <Position21>
+        <Filename Value="setwnd.pas"/>
+        <Caret Line="48" Column="16" TopLine="34"/>
+      </Position21>
+      <Position22>
+        <Filename Value="setwnd.pas"/>
+        <Caret Line="86" Column="24" TopLine="62"/>
+      </Position22>
+      <Position23>
+        <Filename Value="setwnd.pas"/>
+        <Caret Line="32" Column="22" TopLine="23"/>
+      </Position23>
+      <Position24>
+        <Filename Value="gui.pas"/>
+        <Caret Line="62" Column="50" TopLine="40"/>
+      </Position24>
+      <Position25>
+        <Filename Value="gui.pas"/>
+        <Caret Line="54" Column="32" TopLine="40"/>
+      </Position25>
+      <Position26>
+        <Filename Value="gui.pas"/>
+        <Caret Line="239" Column="42" TopLine="224"/>
+      </Position26>
+      <Position27>
+        <Filename Value="gui.pas"/>
+        <Caret Line="60" Column="16" TopLine="40"/>
+      </Position27>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

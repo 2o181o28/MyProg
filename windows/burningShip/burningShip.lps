@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="36">
+      <Unit0>
+        <Filename Value="burningShip.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="21"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="burnship.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="63"/>
+        <CursorPos X="77" Y="80"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="burnship.lfm"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\connect5_gui\gui.lfm"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="77"/>
+        <CursorPos X="11" Y="104"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\connect5_gui\setwnd.lfm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="65"/>
+        <CursorPos X="13" Y="88"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="..\..\Graph\graph of functions\MyMandel.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="31" Y="32"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\..\Graph\graph of functions\rose.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="3" Y="18"/>
+        <UsageCount Value="10"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\..\Graph\tetris\tetris.pas"/>
+        <UnitName Value="Tetris"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="212"/>
+        <CursorPos X="23" Y="230"/>
+        <UsageCount Value="10"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="C:\FPC\lazarus\fpc\3.0.2\source\rtl\inc\ctypes.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="279"/>
+        <CursorPos X="17" Y="130"/>
+        <UsageCount Value="10"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\..\参考文件\Pascal ax_pokl\Free Pascal从零开始编游戏（Display单元库使用说明）\实例\7-1.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="30"/>
+        <CursorPos X="11" Y="56"/>
+        <UsageCount Value="10"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\..\参考文件\Pascal ax_pokl\Free Pascal从零开始编游戏（Display单元库使用说明）\实例\display.pp"/>
+        <UnitName Value="Display"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2056"/>
+        <CursorPos X="23" Y="2074"/>
+        <UsageCount Value="10"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="..\winmandel.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="8" Y="102"/>
+        <UsageCount Value="10"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="..\WinBase.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="12"/>
+        <CursorPos X="33" Y="52"/>
+        <UsageCount Value="10"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="D:\TP\SOURCE\APP.PAS"/>
+        <UnitName Value="App"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="828"/>
+        <CursorPos X="21" Y="873"/>
+        <UsageCount Value="10"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="D:\TP\SOURCE\STRINGS.PAS"/>
+        <UnitName Value="Strings"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="534"/>
+        <CursorPos X="9" Y="551"/>
+        <UsageCount Value="10"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="..\..\参考文件\M67\test_chaos(By M67).pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="33"/>
+        <UsageCount Value="10"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="..\..\参考文件\M67\test_alphametic.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="34" Y="7"/>
+        <UsageCount Value="10"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="..\..\参考文件\M67\fact.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="14"/>
+        <UsageCount Value="10"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="..\..\参考文件\M67\backup\fact.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="33" Y="14"/>
+        <UsageCount Value="10"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="..\..\szcx\p.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="19" Y="6"/>
+        <UsageCount Value="10"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="E:\Users\wei\Desktop\20171104T\source\成华睿\zuma.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="70"/>
+        <CursorPos X="19" Y="15"/>
+        <UsageCount Value="10"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="E:\Users\wei\Desktop\20171104T\source\成华睿\stack.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="18"/>
+        <UsageCount Value="10"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="E:\Users\wei\Desktop\20171104T\source\成华睿\cube.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="8" Y="39"/>
+        <UsageCount Value="10"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="..\..\normal\eqsolver\eqsolver.pas"/>
+        <UnitName Value="EquationSolver"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="27"/>
+        <CursorPos X="5" Y="55"/>
+        <UsageCount Value="10"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="..\..\Graph\graph of functions\myfract.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="21"/>
+        <UsageCount Value="10"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="..\..\Graph\graph of functions\grfloat.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="10" Y="11"/>
+        <UsageCount Value="10"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="E:\Users\wei\AppData\Local\Temp\Rar$DI16.077\cheese.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="84"/>
+        <CursorPos X="15" Y="49"/>
+        <UsageCount Value="10"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="E:\Users\wei\AppData\Local\Temp\Rar$DI19.340\complexity.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="8"/>
+        <CursorPos X="17" Y="28"/>
+        <UsageCount Value="10"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="E:\Users\wei\AppData\Local\Temp\Rar$DI22.767\phalanx.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="14"/>
+        <CursorPos X="9" Y="29"/>
+        <UsageCount Value="10"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="..\..\normal\manorboy\manorboy.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="7" Y="22"/>
+        <UsageCount Value="10"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="C:\FPC\lazarus\fpc\3.0.2\source\packages\gmp\examples\pidigits_example.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="C:\FPC\lazarus\fpc\3.0.2\source\packages\gmp\examples\gmp_accept_test.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="17"/>
+        <CursorPos X="9" Y="42"/>
+        <UsageCount Value="10"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="C:\FPC\lazarus\fpc\3.0.2\source\packages\gmp\examples\scanf_example.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="18" Y="11"/>
+        <UsageCount Value="10"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="C:\FPC\lazarus\fpc\3.0.2\source\packages\gmp\examples\scanf_example2.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="70" Y="13"/>
+        <UsageCount Value="10"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="..\..\Graph\gameoflife\gameoflife.pas"/>
+        <UnitName Value="GameOfLife"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="37"/>
+        <CursorPos X="3" Y="39"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="..\..\参考文件\sth\Pascal&amp;C.pas"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="33" Y="9"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit35>
+    </Units>
+    <JumpHistory Count="15" HistoryIndex="14">
+      <Position1>
+        <Filename Value="burnship.pas"/>
+        <Caret Line="55" TopLine="21"/>
+      </Position1>
+      <Position2>
+        <Filename Value="burnship.pas"/>
+        <Caret Line="84" Column="7" TopLine="57"/>
+      </Position2>
+      <Position3>
+        <Filename Value="burnship.pas"/>
+        <Caret Line="76" Column="13" TopLine="59"/>
+      </Position3>
+      <Position4>
+        <Filename Value="burnship.pas"/>
+        <Caret Line="62" Column="9" TopLine="48"/>
+      </Position4>
+      <Position5>
+        <Filename Value="burnship.pas"/>
+        <Caret Line="60" Column="14" TopLine="44"/>
+      </Position5>
+      <Position6>
+        <Filename Value="burnship.pas"/>
+        <Caret Line="74" Column="28" TopLine="63"/>
+      </Position6>
+      <Position7>
+        <Filename Value="burnship.pas"/>
+        <Caret Line="8" Column="66"/>
+      </Position7>
+      <Position8>
+        <Filename Value="burnship.pas"/>
+        <Caret Line="73" Column="31" TopLine="55"/>
+      </Position8>
+      <Position9>
+        <Filename Value="burnship.pas"/>
+        <Caret Line="54" Column="15" TopLine="41"/>
+      </Position9>
+      <Position10>
+        <Filename Value="burnship.pas"/>
+        <Caret Line="59" Column="26" TopLine="44"/>
+      </Position10>
+      <Position11>
+        <Filename Value="burnship.pas"/>
+        <Caret Line="69" Column="15" TopLine="55"/>
+      </Position11>
+      <Position12>
+        <Filename Value="burnship.pas"/>
+        <Caret Line="65" Column="14" TopLine="54"/>
+      </Position12>
+      <Position13>
+        <Filename Value="burnship.pas"/>
+        <Caret Line="79" Column="7" TopLine="55"/>
+      </Position13>
+      <Position14>
+        <Filename Value="burnship.pas"/>
+        <Caret Line="72" Column="16" TopLine="45"/>
+      </Position14>
+      <Position15>
+        <Filename Value="burnship.pas"/>
+        <Caret Line="85" Column="15" TopLine="64"/>
+      </Position15>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

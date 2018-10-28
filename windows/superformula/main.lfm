@@ -1,0 +1,165 @@
+object Form1: TForm1
+  Left = 260
+  Height = 461
+  Top = 209
+  Width = 787
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'SuperFormula'
+  ClientHeight = 461
+  ClientWidth = 787
+  OnCreate = FormCreate
+  LCLVersion = '1.8.0.6'
+  object TrackBar1: TTrackBar
+    Left = 88
+    Height = 25
+    Top = 40
+    Width = 256
+    Max = 100
+    Min = -100
+    OnChange = TrackBar1Change
+    Position = 10
+    TabOrder = 0
+  end
+  object TrackBar2: TTrackBar
+    Left = 88
+    Height = 25
+    Top = 72
+    Width = 256
+    Max = 100
+    Min = -100
+    OnChange = TrackBar2Change
+    Position = 10
+    TabOrder = 1
+  end
+  object TrackBar3: TTrackBar
+    Left = 88
+    Height = 25
+    Top = 108
+    Width = 256
+    Max = 100
+    Min = -100
+    OnChange = TrackBar3Change
+    Position = 10
+    TabOrder = 2
+  end
+  object TrackBar4: TTrackBar
+    Left = 88
+    Height = 25
+    Top = 144
+    Width = 256
+    Max = 100
+    Min = -100
+    OnChange = TrackBar4Change
+    Position = 10
+    TabOrder = 3
+  end
+  object TrackBar5: TTrackBar
+    Left = 88
+    Height = 25
+    Top = 176
+    Width = 256
+    Max = 100
+    Min = -100
+    OnChange = TrackBar5Change
+    Position = 10
+    TabOrder = 4
+  end
+  object TrackBar6: TTrackBar
+    Left = 88
+    Height = 25
+    Top = 214
+    Width = 256
+    Max = 100
+    Min = -100
+    OnChange = TrackBar6Change
+    Position = 10
+    TabOrder = 5
+  end
+  object TrackBar7: TTrackBar
+    Left = 88
+    Height = 25
+    Top = 248
+    Width = 256
+    Max = 100
+    Min = -100
+    OnChange = TrackBar7Change
+    Position = 10
+    TabOrder = 6
+  end
+  object graph: TImage
+    Left = 360
+    Height = 400
+    Top = 24
+    Width = 400
+  end
+  object Edit1: TEdit
+    Left = 32
+    Height = 25
+    Top = 44
+    Width = 48
+    OnChange = Edit1Change
+    TabOrder = 7
+    Text = '1'
+  end
+  object Edit2: TEdit
+    Left = 32
+    Height = 25
+    Top = 78
+    Width = 48
+    OnChange = Edit2Change
+    TabOrder = 8
+    Text = '1'
+  end
+  object Edit3: TEdit
+    Left = 32
+    Height = 25
+    Top = 112
+    Width = 48
+    OnChange = Edit3Change
+    TabOrder = 9
+    Text = '1'
+  end
+  object Edit4: TEdit
+    Left = 32
+    Height = 25
+    Top = 146
+    Width = 48
+    OnChange = Edit4Change
+    TabOrder = 10
+    Text = '1'
+  end
+  object Edit5: TEdit
+    Left = 32
+    Height = 25
+    Top = 180
+    Width = 48
+    OnChange = Edit5Change
+    TabOrder = 11
+    Text = '1'
+  end
+  object Edit6: TEdit
+    Left = 32
+    Height = 25
+    Top = 214
+    Width = 48
+    OnChange = Edit6Change
+    TabOrder = 12
+    Text = '1'
+  end
+  object Edit7: TEdit
+    Left = 32
+    Height = 25
+    Top = 248
+    Width = 48
+    OnChange = Edit7Change
+    TabOrder = 13
+    Text = '1'
+  end
+  object formula: TImage
+    Left = 32
+    Height = 84
+    Top = 320
+    Width = 300
+    Transparent = True
+  end
+end

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="17">
+      <Unit0>
+        <Filename Value="minesweeper.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="135"/>
+        <CursorPos X="61" Y="149"/>
+        <UsageCount Value="24"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="C:\lazarus\fpc\3.0.0\demo\graph\mandel.pp"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="3" Y="3"/>
+        <UsageCount Value="10"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="C:\lazarus\fpc\3.0.0\demo\win32\edit.pp"/>
+        <UnitName Value="editdemo"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="141"/>
+        <UsageCount Value="10"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\tetris\tetris.pas"/>
+        <UnitName Value="Tetris"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="30" Y="32"/>
+        <UsageCount Value="10"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="C:\FPC\lazarus\fpc\3.0.0\source\packages\rtl-objpas\src\inc\strutils.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="139"/>
+        <CursorPos X="22" Y="104"/>
+        <UsageCount Value="10"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="C:\FPC\lazarus\fpc\3.0.2\source\packages\graph\src\win32\winmouse.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="70"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\..\normal\fenci\fenci.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="13" Y="2"/>
+        <UsageCount Value="10"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="E:\Users\wei\Downloads\Sound-Pirate-master\Sound-Pirate-master\src\background.js"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="99"/>
+        <CursorPos X="18" Y="100"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="JScript"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\RandomWalk&amp;Maps\randwalk.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="17" Y="5"/>
+        <UsageCount Value="10"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="C:\FPC\lazarus\fpc\3.0.2\source\packages\graph\src\win32\graph.pp"/>
+        <UnitName Value="Graph"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1390"/>
+        <CursorPos X="40" Y="1397"/>
+        <UsageCount Value="10"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="C:\FPC\lazarus\fpc\3.0.2\source\rtl\win\wininc\func.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="792"/>
+        <CursorPos X="10" Y="806"/>
+        <UsageCount Value="10"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="C:\FPC\lazarus\fpc\3.0.2\source\packages\graph\src\inc\graph.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="19"/>
+        <CursorPos X="36" Y="28"/>
+        <UsageCount Value="10"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="..\..\test\t11.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="..\..\test\t1.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="34" Y="16"/>
+        <UsageCount Value="10"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="..\graph of functions\grfloat.pas"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="2"/>
+        <CursorPos X="27" Y="9"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="..\..\normal\manorboy\manorboy.pas"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="25" Y="17"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="..\..\参考文件\M67\Pascal&amp;C.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="29" Y="5"/>
+        <UsageCount Value="10"/>
+      </Unit16>
+    </Units>
+    <JumpHistory HistoryIndex="-1"/>
+  </ProjectSession>
+</CONFIG>

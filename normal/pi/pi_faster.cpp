@@ -6,25 +6,18 @@ using namespace std;
 
 struct comp{
 	double x,y;
-	comp(double x=0,double y=0):x(x),y(y){}
-	comp operator + (const comp& b) const {
-		return comp(x+b.x,y+b.y);
+	comp operator+(const comp& b)const{return {x+b.x,y+b.y};}
+	comp operator-(const comp& b)const{return {x-b.x,y-b.y};}
+	comp operator*(const comp& b)const{
+		return {x*b.x-y*b.y,x*b.y+y*b.x};
 	}
-	comp operator - (const comp& b) const {
-		return comp(x-b.x,y-b.y);
-	}
-	comp operator * (const comp& b) const {
-		return comp(x*b.x-y*b.y,x*b.y+y*b.x);
-	}
-	comp operator / (double b) const {
-		return comp(x/b,y/b);
-	}
+	comp operator/(double b)const{return {x/b,y/b};}
 };
-comp conj(const comp &x){return comp(x.x,-x.y);}
+comp conj(const comp &x){return comp{x.x,-x.y};}
 
 const int LOG=19,DMAXLEN=(1<<LOG),
 	MAXLEN=DMAXLEN>>1,BASE=10000;
-const comp C_I(0,1);
+const comp C_I{0,1};
 
 int _l,_rev[LOG+2][DMAXLEN];
 comp _w[LOG+2][DMAXLEN];
@@ -100,23 +93,22 @@ decimal operator >>(cdecimal a,int b){ //b=1
 }
 
 void fft(comp *a,int lg){
-	int len=1<<lg;
+	int len=1<<lg,j;comp *p;
 	for(int i=0;i<len;++i)if(i<_rev[lg][i])
 		swap(a[i],a[_rev[lg][i]]);
 	for(int i=0;i<lg;++i)
-		for(int j=0;j<len;++j)if(j&1<<i){
+		for(j=0,p=_w[i+1];j<len;++j)if(j&1<<i){
 			int x=j^1<<i;
-			a[j]=a[j]*_w[lg][(x&((1<<i)-1))<<(lg-1-i)];
-			comp tmp=a[j]+a[x];
-			a[j]=a[x]-a[j];a[x]=tmp;
+			comp l=a[x],r=a[j]*p[x&(1<<i)-1];
+			a[x]=l+r;a[j]=l-r;
 		}
 }
 
 comp _c1[DMAXLEN],_c2[DMAXLEN];
 decimal operator * (cdecimal a,cdecimal b){
 	int len=2*_l;
-	for(int i=0;i<_l;i++)_c1[i]=comp(a.a[_l-1-i],-b.a[_l-1-i]);
-	for(int i=_l;i<len;i++)_c1[i]=0;
+	for(int i=0;i<_l;i++)_c1[i]={(double)a.a[_l-1-i],(double)-b.a[_l-1-i]};
+	for(int i=_l;i<len;i++)_c1[i]={};
 	fft(_c1,log2(len));
 	for(int i=0;i<len;i++){
 		comp p=_c1[i],q=conj(_c1[(len-i)&(len-1)]);
@@ -163,7 +155,7 @@ void iinit(){
 	for(int i=1;i<=LOG;i++)
 		for(int j=0;j<(1<<i);j++)
 			_rev[i][j]=(_rev[i][j>>1]>>1)|((j&1)<<(i-1)),
-			_w[i][j]=comp(cos(-2*Pi*j/(1<<i)),sin(-2*Pi*j/(1<<i)));
+			_w[i][j]={cos(-2*Pi*j/(1<<i)),sin(-2*Pi*j/(1<<i))};
 	_a.a[0]=1;
 	_b.a[0]=2;_b=rsqrt(_b);
 	_t.a[0]=0;_t.a[1]=2500;

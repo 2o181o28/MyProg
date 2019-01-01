@@ -23,28 +23,21 @@ point jd(line A,line B){
     return A.p+A.v*(cross(B.p-A.p,B.v)/cross(A.v,B.v));
 }
 bool left(line l,point p){return cross(l.v,p-l.p)>0;}
-double HPI(vector<line> &v){
-    sort(v.begin(),v.end());
+deque<line> HPI(vector<line> &v){
+    sort(v.begin(),v.end(),[](line a,line b){return a.ang<b.ang;});
     deque<line> q;
-    q.push_back(v[0]);
-    for(int i=1;i<(int)v.size();i++){
-        while(q.size()>1 && !left(v[i],jd(q.back(),frback(q))))q.pop_back();
-        while(q.size()>1 && !left(v[i],jd(q[0],q[1])))q.pop_front();
-        q.push_back(v[i]);
-        if(fabs(cross(q.back().v,frback(q).v))<eps){
-            line a=q.back(),b=frback(q);
+    for(line&i:v){
+        while(q.size()>1 && !left(i,jd(q.back(),q.end()[-2])))q.pop_back();
+        while(q.size()>1 && !left(i,jd(q[0],q[1])))q.pop_front();
+        q.push_back(i);
+        if(q.size()>1 && fabs(cross(q.back().v,q.end()[-2].v))<1e-8){
+            line a=q.back(),b=q.end()[-2];
             q.pop_back(),q.pop_back();
             q.push_back(left(a,b.p)?b:a);
         }
     }
-    while(q.size()>1 && !left(q[0],jd(q.back(),frback(q))))q.pop_back();
-    int n=q.size();
-    if(n<=1)return 0;
-    vector<point> p;
-    for(int i=0;i<n;i++)p.push_back(jd(q[i],q[(i+1)%n]));
-    double r=0;
-    for(int i=0;i<n;i++)r+=cross(p[i],p[(i+1)%n]);
-    return fabs(r)/2;
+    while(q.size()>1 && !left(q[0],jd(q.back(),q.end()[-2])))q.pop_back();
+    return q;
 }
 void CH(point *a,int n,vector<point> &o){
     static vector<point> t;t.clear();

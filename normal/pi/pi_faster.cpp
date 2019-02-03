@@ -93,14 +93,14 @@ decimal operator >>(cdecimal a,int b){ //b=1
 }
 
 void fft(comp *a,int lg){
-	int len=1<<lg,j;comp *p;
+	int len=1<<lg,j;
 	for(int i=0;i<len;++i)if(i<_rev[lg][i])
 		swap(a[i],a[_rev[lg][i]]);
-	for(int i=0;i<lg;++i)
-		for(j=0,p=_w[i+1];j<len;++j)if(j&1<<i){
-			int x=j^1<<i;
-			comp l=a[x],r=a[j]*p[x&(1<<i)-1];
-			a[x]=l+r;a[j]=l-r;
+	for(int i=0;i<lg;i++)
+		for(j=0;j<len;j+=1<<i+1){
+			comp *p=a+j,*q=a+(j|1<<i),r;
+			for(int k=0;k<1<<i;k++,q++,p++)
+				r=*q*_w[i+1][k],*q=*p-r,*p=*p+r;
 		}
 }
 
@@ -149,7 +149,7 @@ decimal rsqrt(cdecimal x){
 		a=a+(a*(one-x*a*a)>>1);
 	_l=MAXLEN;a=a+(a*(one-x*a*a)>>1);
 	return a; 
-} 
+}
 
 void iinit(){
 	for(int i=1;i<=LOG;i++)

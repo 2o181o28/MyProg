@@ -31,8 +31,8 @@ void MainWindow::paintEvent(QPaintEvent*){
 	QMatrix ma;ma.rotate(ang);
 	int m=width(),n=height();
 	p.drawPixmap(rect(),pix); // must be here; weird arguments
-	auto x=(1/cos(ang/180*M_PI)-1)/2;
-	p.drawPixmap(QRect(-x*m,-x*n,(1+2*x)*m,(1+2*x)*n),
+	auto x=n*(cos(ang/180*M_PI)+sin(ang/180*M_PI))/2;
+	p.drawPixmap(QRect(n/2-x,n/2-x,2*x,2*x),
 				 pix.transformed(ma,Qt::SmoothTransformation));
 }
 

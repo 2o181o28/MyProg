@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
-#define int64 long long
 #define Pi acos(-1)
 #define cdecimal const decimal& 
 using namespace std;
+using ll=long long;
 
 struct comp{
 	double x,y;
@@ -23,7 +23,7 @@ int _l,_rev[LOG+2][DMAXLEN];
 comp _w[LOG+2][DMAXLEN];
 
 struct decimal{
-	int sgn;int64 a[MAXLEN+10];
+	int sgn;ll a[MAXLEN+10];
 	decimal(){sgn=1;memset(a,0,sizeof(a));}
 }_a,_b,_t;
 
@@ -50,7 +50,7 @@ decimal operator - (cdecimal a,cdecimal b){
 	if(a.sgn==-1 && b.sgn==1)return -(b+(-a));
 	if(a.sgn==-1 && b.sgn==-1)return (-b)-(-a);
 	if(a<b)return -(b-a);
-	decimal c;int64 jw=0;
+	decimal c;ll jw=0;
 	for(int i=_l-1;~i;i--){
 		c.a[i]=(BASE+a.a[i]-jw-b.a[i])%BASE;
 		jw=a.a[i]-jw<b.a[i];
@@ -62,7 +62,7 @@ decimal operator + (cdecimal a,cdecimal b){
 	if(a.sgn==1 && b.sgn==-1)return a-(-b);
 	if(a.sgn==-1 && b.sgn==1)return b-(-a);
 	if(a.sgn==-1 && b.sgn==-1)return -((-b)+(-a));
-	decimal c;int64 jw=0;
+	decimal c;ll jw=0;
 	for(int i=_l-1;~i;i--){
 		c.a[i]=(a.a[i]+b.a[i]+jw)%BASE;
 		jw=a.a[i]+b.a[i]+jw>=BASE;
@@ -71,7 +71,7 @@ decimal operator + (cdecimal a,cdecimal b){
 }
 
 decimal operator * (cdecimal a,int b){ //a.sgn>0;b>0
-	decimal c;int64 jw=0;
+	decimal c;ll jw=0;
 	for(int i=_l-1;~i;i--){
 		c.a[i]=(a.a[i]*b+jw)%BASE;
 		jw=(a.a[i]*b+jw)/BASE;
@@ -83,7 +83,7 @@ decimal operator * (int a,cdecimal b){return b*a;}
 
 decimal operator >>(cdecimal a,int b){ //b=1
 	decimal c;c.sgn=a.sgn;
-	int64 jw=0;
+	ll jw=0;
 	for(int i=0;i<_l;i++){
 		c.a[i]=(a.a[i]+jw*BASE)>>1;
 		jw=(a.a[i]+jw*BASE)&1;

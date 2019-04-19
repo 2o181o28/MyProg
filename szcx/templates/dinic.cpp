@@ -1,11 +1,10 @@
-struct edge{int u,v,cap;};
+struct edge{int v,cap;};
 struct Dinic{
 	vector<edge> e;
 	vector<int> v[maxn];
 	int s,t,dis[maxn],que[maxn],cur[maxn];
-	void AddEdge(int x,int y,int cap=1){
-		e.push_back(edge{x,y,cap});
-		e.push_back(edge{y,x,0});
+	void addEdge(int x,int y,int cap=1){
+		e.insert(e.end(),{{y,cap},{x,0}});
 		v[x].push_back(e.size()-2);
 		v[y].push_back(e.size()-1);
 	}

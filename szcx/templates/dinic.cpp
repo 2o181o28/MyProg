@@ -1,12 +1,11 @@
 struct edge{int v,cap;};
 struct Dinic{
-	vector<edge> e;
-	vector<int> v[maxn];
+	basic_string<edge> e;
+	basic_string<int> v[maxn];
 	int s,t,dis[maxn],que[maxn],cur[maxn];
 	void addEdge(int x,int y,int cap=1){
-		e.insert(e.end(),{{y,cap},{x,0}});
-		v[x].push_back(e.size()-2);
-		v[y].push_back(e.size()-1);
+		e+={{y,cap},{x,0}};
+		v[x]+=e.size()-2;v[y]+=e.size()-1;
 	}
 	int bfs(){
 		memset(dis,0x3f,sizeof dis);
@@ -21,10 +20,10 @@ struct Dinic{
 	int dfs(int p,int a){
 		if(p==t || !a)return a;
 		int fl=0,f;
-		for(int &i=cur[p],to;i<(int)v[p].size();i++){
-			edge &E=e[v[p][i]];
-			if(dis[to=E.v]==dis[p]+1 && (f=dfs(to,min(a,E.cap)))){
-				E.cap-=f,e[v[p][i]^1].cap+=f;a-=f,fl+=f;
+		for(int i:v[p].substr(cur[p])){
+			edge &E=e[i];cur[p]++;
+			if(dis[E.v]==dis[p]+1 && (f=dfs(E.v,min(a,E.cap)))){
+				E.cap-=f,e[i^1].cap+=f;a-=f,fl+=f;
 				if(!a)break;
 			}
 		}

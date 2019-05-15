@@ -18,23 +18,18 @@ void tsort(int i){
 
 // std::sort:
 void Init_SA(){
-    for(int i=1;i<=n;i++)
-        rnk[i]=s[i],sa[i]=i;
-    for(int i=1;i<=n;i<<=1){
-        sort(sa+1,sa+1+n,[&](int a,int b){
-            return rnk[a]<rnk[b] || rnk[a]==rnk[b] && rnk[a+i]<rnk[b+i];
-        });
-        nrnk[sa[1]]=1;
-        for(int j=2,cnt=1;j<=n;nrnk[sa[j++]]=cnt)
-            cnt+=rnk[sa[j]]!=rnk[sa[j-1]] || rnk[sa[j]+i]!=rnk[sa[j-1]+i];
-        memcpy(rnk,nrnk,sizeof nrnk);
-    }
+	for(int i=1;i<=n;i++)rnk[i]=s[i],sa[i]=i;
+	for(int i=1;i<=n;i<<=1){
+		sort(sa+1,sa+1+n,[&](int a,int b){
+			return rnk[a]<rnk[b]||rnk[a]==rnk[b]&&rnk[a+i]<rnk[b+i];
+		});
+		for(int j=1,cnt=0;j<=n;nrnk[sa[j++]]=cnt)
+			cnt+=rnk[sa[j]]!=rnk[sa[j-1]]||rnk[sa[j]+i]!=rnk[sa[j-1]+i];
+		memcpy(rnk,nrnk,sizeof nrnk);
+	}
 }
 
 void Init_height(){
-    for(int k=0,i=1;i<=n;i++){
-        if(k)k--;
-        while(s[i+k]==s[sa[rnk[i]-1]+k])++k;
-        h[rnk[i]]=k;
-    }
+	for(int i=1,k=0;i<=n;st[0][rnk[i++]-1]=k)
+		for(k&&k--;s[i+k]==s[sa[rnk[i]-1]+k];k++);
 }

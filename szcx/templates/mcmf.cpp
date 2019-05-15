@@ -1,24 +1,22 @@
-#define pa pair<int,int>
 #define maxn 50010
 #define inf 1e9
 using namespace std;
+using pa=pair<int,int>;
 struct edge{int v,cap,w;};
 struct MCMF{
 	int n,s,t,p[maxn],dis[maxn],inq[maxn],que[maxn*30];
-	vector<int> v[maxn];
-	vector<edge> e;
+	basic_string<int> v[maxn];
+	basic_string<edge> e;
 	void Init(int n){
 		this->n=n;e.clear();
 		for(int i=0;i<n;i++)v[i].clear();
 	}
-	void addEdge(int x,int y,int cap,int cost){
-		e.insert(e.end(),{{y,cap,cost},{x,0,-cost}});
-		v[x].push_back(e.size()-2);
-		v[y].push_back(e.size()-1);
+	void addEdge(int x,int y,int cap=1,int cost=0){
+		e+={{y,cap,cost},{x,0,-cost}};
+		v[x]+=e.size()-2;v[y]+=e.size()-1;
 	}
 	pa SSSP(){
 		memset(dis,0x3f,sizeof dis);
-		memset(inq,0,sizeof inq);
 		memset(p,-1,sizeof p);
 		dis[s]=0;que[1]=s;
 		int l=1,r=1;

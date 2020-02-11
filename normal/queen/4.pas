@@ -1,5 +1,5 @@
 var n,cnt:longint;
-	a,b,c:array[1..30]of longint;
+	a,b,c:longint;
 procedure dfs(d:longint);
 var i:longint;
 begin
@@ -8,10 +8,10 @@ begin
 		exit();
 	end;
 	for i:=1 to n do
-		if(a[i]=0) and (b[i+d]=0) and (c[i+n-d]=0) then begin
-			a[i]:=1;b[i+d]:=1;c[i+n-d]:=1;
+		if (((a>>i) and 1) or ((b>>(i+d)) and 1) or ((c>>(i+n-d)) and 1))=0 then begin
+			a:=a or (1<<i);b:=b or (1<<(i+d));c:=c or (1<<(i+n-d));
 			dfs(d+1);
-			a[i]:=0;b[i+d]:=0;c[i+n-d]:=0;
+			a:=a xor (1<<i);b:=b xor (1<<(i+d));c:=c xor (1<<(i+n-d));
 		end
 end;
 begin

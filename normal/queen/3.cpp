@@ -1,17 +1,17 @@
 #include<stdio.h>
-int n,cnt,a[30],b[30],c[30];
+int n,cnt,a,b,c;
 void dfs(int d){
 	if(d>n){
 		cnt++;
 		return;
 	}
 	for(int i=1;i<=n;i++){
-		if(a[i]==0 && 
-			b[i+d]==0 && 
-			c[i+n-d]==0){
-			a[i]=b[i+d]=c[i+n-d]=1;
+		if(!(a>>i&1 |
+			b>>i+d&1 |
+			c>>i+n-d&1)){
+			a|=1<<i,b|=1<<i+d,c|=1<<i+n-d;
 			dfs(d+1);
-			a[i]=b[i+d]=c[i+n-d]=0;
+			a^=1<<i,b^=1<<i+d,c^=1<<i+n-d;
 		}
 	}
 }

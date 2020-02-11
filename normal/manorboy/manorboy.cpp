@@ -2,9 +2,7 @@
 using namespace std;
 using func=function<int()>;
 int A(int k,func x1,func x2,func x3,func x4,func x5){
-	func B=[&]{
-		--k;return A(k,B,x1,x2,x3,x4);
-	};
+	func B=[&]{return A(--k,B,x1,x2,x3,x4);};
 	if(k<=0)return x4()+x5();
 	return B();
 }

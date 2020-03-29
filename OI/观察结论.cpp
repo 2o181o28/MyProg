@@ -1,3 +1,8 @@
+/*
+Input : n
+Output: 若干相邻整数和为n的所有方案
+Complexity: O(sqrt(n))
+*/
 #include<cstdio>
 #include<cmath>
 #include<vector>

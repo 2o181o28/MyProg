@@ -5,8 +5,8 @@ using ull=uint64_t;
 using uch=unsigned char;
 using um=unordered_map<int,int>;
 uniform_real_distribution<double> u(0,1);
-default_random_engine e;
-const int k=8;
+default_random_engine e(GetTickCount());
+const int k=3;
 char s[1<<24];int n,t[1<<24],m;
 unordered_map<ull,um> mp;
 ull hsh(int l,int r){
@@ -22,8 +22,7 @@ int getop(const um&x){
 		return pa.first;
 }
 int main(){
-	freopen("1.txt","r",stdin);
-	e.seed(GetTickCount());
+	freopen("1-ansi.txt","r",stdin);
 	for(char c;~(c=getchar());)
 		s[++n]=c;
 	for(int i=1;i<=n;)
@@ -32,12 +31,15 @@ int main(){
 		else t[++m]=(uch)s[i++];
 	for(int i=k+1;i<=m;i++)
 		mp[hsh(i-k,i-1)][t[i]]++;
-	for(int i=k+1;i<=10000;i++)
+	uniform_int_distribution<int> U(1,m-k+1);
+	memmove(t+1,t+U(e),k*sizeof(int));
+	for(int i=k+1;i<=1000;i++)
 		assert(mp.count(hsh(i-k,i-1))),t[i]=getop(mp[hsh(i-k,i-1)]);
-	for(int i=1;i<=10000;i++){
+	for(int i=1;i<=1000;i++){
 		if(t[i]>>16)printf("%c%c",t[i]>>16,t[i]&65535);
 		else printf("%c",t[i]);
 	}
 	puts("");
 	return 0;
 }
+

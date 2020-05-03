@@ -1,24 +1,24 @@
-| Language   | $n=10$ | $n=12$  |  $n=14$  |
+| Language   | n=10 | n=12  |  n=14  |
 | ---------- | :----: | :-----: | :------: |
-| bash       | 2.244s | 69.361s |   TLE    |
-| python3    | 0.147s | 3.457s  | 123.045s |
-| pypy3      | 0.079s | 0.209s  |  2.536s  |
-| pascal     | 0.000s | 0.033s  |  1.107s  |
-| c++        | 0.003s | 0.030s  |  0.876s  |
-| c          | 0.000s | 0.027s  |  0.872s  |
-| g++        | 0.000s | 0.029s  |  0.938s  |
-| gcc        | 0.000s | 0.031s  |  0.924s  |
-| javascript | 0.256s | 0.304s  |  2.090s  |
+| bash       | 2.334s | 65.314s |   TLE    |
+| python3    | 0.122s | 3.112s  | 113.830s |
+| pypy3      | 0.037s | 0.178s  |  2.686s  |
+| pascal     | 0.004s | 0.034s  |  1.141s  |
+| c++        | 0.003s | 0.024s  |  0.735s  |
+| c          | 0.003s | 0.019s  |  0.733s  |
+| g++        | 0.000s | 0.019s  |  0.673s  |
+| gcc        | 0.003s | 0.023s  |  0.675s  |
+| javascript | 0.297s | 0.356s  |  1.935s  |
 
 
 
 | Language   | Version                                                      |
 | ---------- | ------------------------------------------------------------ |
-| bash       | GNU bash，版本 4.4.20(1)-release (x86_64-pc-linux-gnu)       |
-| python3    | Python 3.6.9                                                 |
-| pypy3      | PyPy 5.10.1 with GCC 6.2.0 20160901                          |
-| pascal     | Free Pascal Compiler version 3.0.4+dfsg-18ubuntu2 [2018/08/29] for x86_64, (compiled with `-O3`) |
-| c++/c      | clang version 8.0.0-3~ubuntu18.04.2, (compiled with `-O3`)   |
-| g++/gcc    | gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1), (compiled with `-O3`) |
-| javascript | nodejs v8.10.0                                               |
+| bash       | GNU bash，版本 5.0.16(1)-release (x86_64-pc-linux-gnu)       |
+| python3    | Python 3.8.2                                                 |
+| pypy3      | PyPy 7.3.1 with GCC 7.3.1 20180303                          |
+| pascal     | Free Pascal Compiler version 3.0.4+dfsg-23 [2019/11/25] for x86_64, (compiled with `-O3`) |
+| c++/c      | clang version 10.0.0-4ubuntu1, (compiled with `-Ofast -march=native`)   |
+| g++/gcc    | gcc version 10.0.1 20200411, (compiled with `-Ofast -march=native`) |
+| javascript | nodejs v10.19.0                                               |
 

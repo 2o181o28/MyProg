@@ -27,8 +27,8 @@ int BM(int n){
 	return l[n-1];
 }
 int main(){
-	scanf("%d",&n);srand(clock());
-	for(int i=0;i<n;i++)scanf("%d",a+i);
+	scanf("%d",&n);
+	for(int i=0;i<n;i++)scanf("%lld",a+i),a[i]%=mod;
 	int l=BM(n);printf("%d\n",l);
 	for(int i=1;i<=l;i++)printf("%lld%c",(res[i]+mod)%mod," \n"[i==l]);
 	return 0;

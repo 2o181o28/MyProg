@@ -1,4 +1,4 @@
-//usr/bin/c++ $0 -o ${0%.cpp} -O3 -lgmp -lgmpxx; time ./${0%.cpp} > /dev/null; exit
+//usr/bin/c++ $0 -o ${0%.cpp} -Ofast -march=native -lgmp -lgmpxx; time ./${0%.cpp} > /dev/null; exit
 #include<bits/stdc++.h>
 #include<gmpxx.h>
 using namespace std;

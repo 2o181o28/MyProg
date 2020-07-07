@@ -40,7 +40,7 @@ decimal operator - (cdecimal a){decimal b=a;b.sgn*=-1;return b;}
 bool operator < (cdecimal a,cdecimal b){
 	if(a.sgn!=b.sgn)return a.sgn<b.sgn;
 	if(a.sgn==-1)return (-b)<(-a);
-	for(int i=0;i<_l;i++)
+	for(int i=0;i<=_l;i++)
 		if(a.a[i]!=b.a[i])return a.a[i]<b.a[i];
 	return 0;
 }
@@ -51,7 +51,7 @@ decimal operator - (cdecimal a,cdecimal b){
 	if(a.sgn==-1 && b.sgn==-1)return (-b)-(-a);
 	if(a<b)return -(b-a);
 	decimal c;ll jw=0;
-	for(int i=_l-1;~i;i--){
+	for(int i=_l;~i;i--){
 		c.a[i]=(BASE+a.a[i]-jw-b.a[i])%BASE;
 		jw=a.a[i]-jw<b.a[i];
 	}
@@ -63,7 +63,7 @@ decimal operator + (cdecimal a,cdecimal b){
 	if(a.sgn==-1 && b.sgn==1)return b-(-a);
 	if(a.sgn==-1 && b.sgn==-1)return -((-b)+(-a));
 	decimal c;ll jw=0;
-	for(int i=_l-1;~i;i--){
+	for(int i=_l;~i;i--){
 		c.a[i]=(a.a[i]+b.a[i]+jw)%BASE;
 		jw=a.a[i]+b.a[i]+jw>=BASE;
 	}
@@ -72,7 +72,7 @@ decimal operator + (cdecimal a,cdecimal b){
 
 decimal operator * (cdecimal a,int b){ //a.sgn>0;b>0
 	decimal c;ll jw=0;
-	for(int i=_l-1;~i;i--){
+	for(int i=_l;~i;i--){
 		c.a[i]=(a.a[i]*b+jw)%BASE;
 		jw=(a.a[i]*b+jw)/BASE;
 	}
@@ -84,11 +84,11 @@ decimal operator * (int a,cdecimal b){return b*a;}
 decimal operator >>(cdecimal a,int b){ //b=1
 	decimal c;c.sgn=a.sgn;
 	ll jw=0;
-	for(int i=0;i<_l;i++){
+	for(int i=0;i<=_l;i++){
 		c.a[i]=(a.a[i]+jw*BASE)>>1;
 		jw=(a.a[i]+jw*BASE)&1;
 	}
-	c.a[_l]=jw*BASE>>1;
+	c.a[_l+1]=jw*BASE>>1;
 	return c;
 }
 
@@ -106,18 +106,21 @@ void fft(comp *a,int lg){
 
 comp _c1[DMAXLEN],_c2[DMAXLEN];
 decimal operator * (cdecimal a,cdecimal b){
-	int len=2*_l;
-	for(int i=0;i<_l;i++)_c1[i]={(double)a.a[_l-1-i],(double)-b.a[_l-1-i]};
-	for(int i=_l;i<len;i++)_c1[i]={};
-	fft(_c1,log2(len));
+	int len=2*_l,ub=_l-(_l==MAXLEN),up=min(_l+10,len);
+	for(int i=0;i<=ub;i++)_c1[i]={(double)a.a[i],(double)-b.a[i]};
+	for(int i=ub+1;i<len;i++)_c1[i]={};
+	fft(_c1,__lg(len));
 	for(int i=0;i<len;i++){
 		comp p=_c1[i],q=conj(_c1[(len-i)&(len-1)]);
 		_c2[i]=conj((p+q)*(p-q)/4.0*C_I);
 	}
-	fft(_c2,log2(len));
+	fft(_c2,__lg(len));
 	decimal c;c.sgn=a.sgn*b.sgn;
-	for(int i=0;i<_l;i++)c.a[i]=_c2[len-i-2].x/len+0.5;
-	for(int i=_l-1;i;i--)c.a[i-1]+=c.a[i]/BASE,c.a[i]%=BASE;
+	for(int i=0;i<up;i++)c.a[i]=_c2[i].x/len+0.5;
+	for(int i=up-1;i>_l;i--)c.a[i-1]+=c.a[i]/BASE,c.a[i]%=BASE;
+	if(c.a[_l+1]>=BASE/2)c.a[_l]++;
+	for(int i=_l+1;i<up;i++)c.a[i]=0;
+	for(int i=_l;i;i--)c.a[i-1]+=c.a[i]/BASE,c.a[i]%=BASE;
 	return c;
 }
 
@@ -126,13 +129,12 @@ decimal inv(cdecimal x){
 	for(int i=0;i<=4;i++)d+=x.a[i]/pow(BASE,i);
 	d=1/d;
 	decimal a;a.a[0]=d,a.sgn=x.sgn;
-	for(int i=1;i<=4;i++)
+	for(int i=1;i<=2;i++)
 		a.a[i]=d=(d-floor(d))*BASE;
 	decimal two;two.a[0]=2;
 	for(_l=4;_l<=MAXLEN;_l<<=1)
 		a=a*(two-x*a);
-	_l=MAXLEN;a=a*(two-x*a);
-	return a; 
+	_l=MAXLEN;return a;
 }
 
 decimal operator / (cdecimal a,cdecimal b){return inv(b)*a;}
@@ -142,13 +144,12 @@ decimal rsqrt(cdecimal x){
 	for(int i=0;i<=4;i++)d+=x.a[i]/pow(BASE,i);
 	d=1/sqrt(d);
 	decimal a;a.a[0]=d,a.sgn=x.sgn;
-	for(int i=1;i<=4;i++)
+	for(int i=1;i<=2;i++)
 		a.a[i]=d=(d-floor(d))*BASE;
 	decimal one;one.a[0]=1;
 	for(_l=4;_l<=MAXLEN;_l<<=1)
 		a=a+(a*(one-x*a*a)>>1);
-	_l=MAXLEN;a=a+(a*(one-x*a*a)>>1);
-	return a; 
+	_l=MAXLEN;return a; 
 }
 
 void iinit(){

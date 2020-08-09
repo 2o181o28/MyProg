@@ -1,5 +1,3 @@
-use std::io;
-
 struct Main{
 	n:i32,
 	cnt:i32,
@@ -34,8 +32,9 @@ impl Main{
 }
 
 fn main(){
-	let mut input=String::new();
-	io::stdin().read_line(&mut input).unwrap();
-	let mut inst=Main::new(input.trim().parse().unwrap());
+	extern"C" {fn scanf(_:&[u8;2],_:&mut i32);}
+	let mut n=0;
+	unsafe{scanf(b"%d",&mut n);}
+	let mut inst=Main::new(n);
 	inst.solve();
 }

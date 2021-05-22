@@ -1,49 +1,58 @@
 #include<bits/stdc++.h>
-#define extended long double
 #define re real()
 #define im imag()
-#define Tau 2*__builtin_acosl(-1)
 using namespace std;
-const extended eps=1e-10;
-typedef complex<extended> compd;
-vector<compd> ans;
-inline compd F(compd x){return pow(x,5)-2.l*pow(x,2)+1.l;}
-inline bool deq(extended a,extended b,extended eps){return fabs(a-b)<eps;}
-inline extended Dec(extended a,extended b){
-	extended ret=a-b;
-	return deq(ret,Tau,1)?ret-Tau:(deq(ret,-Tau,1)?ret+Tau:ret);
+using ld=long double;
+using cmp=complex<ld>;
+const ld eps=1e-13,U=10;
+vector<cmp> ans;
+/*cmp F(cmp x){return exp(x)*x-pow(x,5)+3.l*pow(x,2)-1.l;}
+cmp diff_F(cmp x){return exp(x)*(x+1.l)-5.l*pow(x,4)+6.l*x;}*/
+cmp F(cmp x){return pow(x,100)-2.l*pow(x,37)+137.l;}
+cmp diff_F(cmp x){return 100.l*pow(x,99)-74.l*pow(x,36);}
+cmp G(cmp x){return diff_F(x)/F(x);}
+// Im(int F'(z)/F(z) dz)
+int nonz(cmp x){return abs(x)>1;}
+ld S(cmp st,cmp ed,cmp lv,cmp rv,cmp md){
+	return ((lv+4.l*md+rv)/6.l*(ed-st)).im;
 }
-extended getwdn(compd st,compd ed){
-	extended ret=0;
-	if(!deq(ed.re,st.re,eps/2.))
-		for(compd dv=max(eps/2.,(ed.re-st.re)/1000.);st.re<ed.re;st+=dv)
-			ret+=Dec(arg(F(st+dv)),arg(F(st)));
-	else
-		for(compd dv(0,max(eps/2.,(ed.im-st.im)/1000.));st.im<ed.im;st+=dv)
-			ret+=Dec(arg(F(st+dv)),arg(F(st)));
-	return ret;
+ld asr(cmp st,cmp ed,cmp lv,cmp rv,cmp md,ld Sv){
+	cmp mdp=(st+ed)/2.l;
+	cmp v1=G((st+mdp)/2.l),v2=G((mdp+ed)/2.l);
+	ld sl=S(st,mdp,lv,md,v1),sr=S(mdp,ed,md,rv,v2);
+	if(abs(sl+sr-Sv)<15e-3)return sl+sr+(sl+sr-Sv)/15.l;
+	return asr(st,mdp,lv,md,v1,sl)+asr(mdp,ed,md,rv,v2,sr);
 }
-void dfs(extended l,extended r,extended u,extended d,int dep){
-	if(r-l<eps || u-d<eps){ans.push_back(compd((l+r)/2,(u+d)/2));return;}
+ld getwdn(cmp st,cmp ed){
+	ld t=S(st,ed,G(st),G(ed),G((st+ed)/2.l));
+	return asr(st,ed,G(st),G(ed),G((st+ed)/2.l),t);
+}
+void dfs(ld l,ld r,ld u,ld d,int dep){
+	if(r-l<eps && u-d<eps){
+		cmp x((l+r)/2,(u+d)/2);
+		for(cmp c:ans)if(abs(x-c)<1e-6)return;
+		ans.push_back(x);return;
+	}
 	if(dep&1){
-		extended mid=(l+r)/2;
-		compd lu(l,u),mu(mid,u),ru(r,u),ld(l,d),rd(r,d),md(mid,d);
-		extended a=getwdn(lu,mu),b=getwdn(mu,ru),c=-getwdn(rd,ru),
+		ld mid=(l+r)/2;
+		cmp lu(l,u),mu(mid,u),ru(r,u),ld(l,d),rd(r,d),md(mid,d);
+		auto a=getwdn(lu,mu),b=getwdn(mu,ru),c=-getwdn(rd,ru),
 			dd=-getwdn(md,rd),e=-getwdn(ld,md),f=getwdn(ld,lu),g=getwdn(md,mu);
-		if(!deq(a-g+e+f,0,.5))dfs(l,mid,u,d,dep+1);
-		if(!deq(b+c+dd+g,0,.5))dfs(mid,r,u,d,dep+1);
+		if(nonz(a-g+e+f))dfs(l,mid,u,d,dep+1);
+		if(nonz(b+c+dd+g))dfs(mid,r,u,d,dep+1);
 	}else{
-		extended mid=(u+d)/2;
-		compd lu(l,u),ru(r,u),ld(l,d),rd(r,d),lm(l,mid),rm(r,mid);
-		extended a=getwdn(lu,ru),b=-getwdn(rm,ru),c=-getwdn(rd,rm),
+		ld mid=(u+d)/2;
+		cmp lu(l,u),ru(r,u),ld(l,d),rd(r,d),lm(l,mid),rm(r,mid);
+		auto a=getwdn(lu,ru),b=-getwdn(rm,ru),c=-getwdn(rd,rm),
 			dd=-getwdn(ld,rd),e=getwdn(ld,lm),f=getwdn(lm,lu),g=getwdn(lm,rm);
-		if(!deq(a+b-g+f,0,.5))dfs(l,r,u,mid,dep+1);
-		if(!deq(g+c+dd+e,0,.5))dfs(l,r,mid,d,dep+1);
+		if(nonz(a+b-g+f))dfs(l,r,u,mid,dep+1);
+		if(nonz(g+c+dd+e))dfs(l,r,mid,d,dep+1);
 	}
 }
 int main(){
-	dfs(-10,10,10,-10,0);
-	for(auto c:ans)
-		printf("%.10Lf%+.10Lfi\n",c.re,c.im);
+	dfs(-U,U,U,-U,0);
+	printf("cnt=%zu\n",ans.size());
+	for(cmp c:ans)
+		printf("x=%.10Lf%+.10Lfi\tabs(f(x))=%.10Lf\n",c.re,c.im,abs(F(c)));
 	return 0;
 }

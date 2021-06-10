@@ -4,7 +4,9 @@
 using namespace std;
 using ld=long double;
 using cmp=complex<ld>;
-const ld eps=1e-13,U=10;
+const ld eps=1e-13,B=10;
+uniform_real_distribution U(0.5-1e-3,0.5+1e-3);
+default_random_engine E(clock()+time(0));
 vector<cmp> ans;
 /*cmp F(cmp x){return exp(x)*x-pow(x,5)+3.l*pow(x,2)-1.l;}
 cmp diff_F(cmp x){return exp(x)*(x+1.l)-5.l*pow(x,4)+6.l*x;}*/
@@ -34,14 +36,14 @@ void dfs(ld l,ld r,ld u,ld d,int dep){
 		ans.push_back(x);return;
 	}
 	if(dep&1){
-		ld mid=(l+r)/2;
+		ld mid=l+(r-l)*U(E);
 		cmp lu(l,u),mu(mid,u),ru(r,u),ld(l,d),rd(r,d),md(mid,d);
 		auto a=getwdn(lu,mu),b=getwdn(mu,ru),c=-getwdn(rd,ru),
 			dd=-getwdn(md,rd),e=-getwdn(ld,md),f=getwdn(ld,lu),g=getwdn(md,mu);
 		if(nonz(a-g+e+f))dfs(l,mid,u,d,dep+1);
 		if(nonz(b+c+dd+g))dfs(mid,r,u,d,dep+1);
 	}else{
-		ld mid=(u+d)/2;
+		ld mid=u+(d-u)*U(E);
 		cmp lu(l,u),ru(r,u),ld(l,d),rd(r,d),lm(l,mid),rm(r,mid);
 		auto a=getwdn(lu,ru),b=-getwdn(rm,ru),c=-getwdn(rd,rm),
 			dd=-getwdn(ld,rd),e=getwdn(ld,lm),f=getwdn(lm,lu),g=getwdn(lm,rm);
@@ -50,7 +52,7 @@ void dfs(ld l,ld r,ld u,ld d,int dep){
 	}
 }
 int main(){
-	dfs(-U,U,U,-U,0);
+	dfs(-B,B,B,-B,0);
 	printf("cnt=%zu\n",ans.size());
 	for(cmp c:ans)
 		printf("x=%.10Lf%+.10Lfi\tabs(f(x))=%.10Lf\n",c.re,c.im,abs(F(c)));

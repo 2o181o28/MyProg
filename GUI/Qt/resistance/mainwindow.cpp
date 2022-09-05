@@ -12,14 +12,18 @@ MainWindow::MainWindow(QWidget *parent) :
 	ui->setupUi(this);
 }
 
-void MainWindow::paintEvent(QPaintEvent *event){
+void MainWindow::paintEvent([[maybe_unused]] QPaintEvent *event){
 	QPainter painter(this);
-	QPointF a,v(10,-10),s(0,250);
-	double dt=1e-5;
+	QPointF v(50,-50),s(0,250);
+	const double dt=1e-4;
+	const auto g=QPointF(0,10);
 	for(int t=0;t<3e6 && s.y()<=500 && s.x()<=500;t++){
 		painter.drawPoint(s);
-		a=QPointF(0,10)-hypot(v.x(),v.y())*v;
-		v+=a*dt;s+=v*dt*100;
+		auto get_a=[&](auto v){
+			return g-hypot(v.x(),v.y())*v;
+		};
+		auto nv=v+get_a(v)*dt;
+		v+=(get_a(v)+get_a(nv))/2*dt;s+=v*dt*100;
 //		qDebug()<<s.x()<<" "<<s.y()<<"\n";
 	}
 }

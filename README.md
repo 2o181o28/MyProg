@@ -4,6 +4,7 @@
 
 目录结构如下：
 - normal/：终端里运行的程序
+	- binary_racer/：用来完成Turing Complete里Binary Racer成就的外挂
 	- connect5/：八年级时写的五子棋AI，无禁手，实力很强，已弃坑
 	- console_games/：游戏
 		- CRT/：小学时写的使用pascal的CRT单元的程序
@@ -16,10 +17,10 @@
 	- fast_rule110/：速度极快的基本元胞自动机模拟器
 	- fenci/：八年级写的中文分词程序，无需词库，仅Windows下可用，已弃坑
 	- manorboy/：各种语言的男人或男孩测试，free pascal无法通过
+	- matrix/：目前只有一个计算相似矩阵的基变换矩阵的垃圾程序，复杂度超高
 	- pi/：求π的各种方法，速度极快
 	- queen/：各种语言的n皇后程序，包含时间测试
 	- randomtext/：马尔科夫链生成随机文本，仅Windows下可用
-	- matrix/：目前只有一个计算相似矩阵的基变换矩阵的垃圾程序，复杂度超高
 - GUI/：图形界面程序
 	- windows/：windows下的图形界面程序，全部已弃坑
 		- burningShip/：Burning ship分形

@@ -4,52 +4,54 @@
 
 目录结构如下：
 - normal/：终端里运行的程序
-	- binary_racer/：用来完成Turing Complete里Binary Racer成就的外挂
-	- connect5/：八年级时写的五子棋AI，无禁手，实力很强，已弃坑
+	- binary_racer/：大二写的用来完成Turing Complete里Binary Racer成就的外挂
+	- connect5/：八年级时写的五子棋AI，无禁手，实力很强
 	- console_games/：游戏
 		- CRT/：小学时写的使用pascal的CRT单元的程序
 		- bfcompiler/：七年级时写的BF解释器
 		- *.pas：这些是年代最久远的老古董，是我刚学会编程时写的程序，仅留作纪念用
 		- purble_place.cpp：高二写的完美的Win7 purble place游戏的AI，吊锤所有人
 		- sudoku.cpp：九年级写的数独求解器
-	- elem/：九年级写的给定分子量搜索化学式，已弃坑
-	- eqsolver/：使用winding number数值求解复系数超越方程的复根
-	- fast_rule110/：速度极快的基本元胞自动机模拟器
-	- fenci/：八年级写的中文分词程序，无需词库，仅Windows下可用，已弃坑
-	- manorboy/：各种语言的男人或男孩测试，free pascal无法通过
-	- matrix/：目前只有一个计算相似矩阵的基变换矩阵的垃圾程序，复杂度超高
-	- pi/：求π和e的各种方法，速度极快
-	- queen/：各种语言的n皇后程序，包含时间测试
-	- randomtext/：马尔科夫链生成随机文本，仅Windows下可用
+	- elem/：九年级写的给定分子量搜索化学式
+	- eqsolver/：九年级时写的，使用winding number数值求解复系数超越方程的复根；高三时好好优化了一下，见[高三文化课学习周记 Part 4](https://2o181o28.github.io/2021/04/17/%E5%91%A8%E8%AE%B0Part_4/#%E7%AC%AC%E5%8D%81%E4%B8%89%E5%91%A82021-05-22)
+		- berlekamp-rabin.cpp：大一时写的有限域快速多项式求根
+	- fast_rule110/：高二写的速度极快的基本元胞自动机模拟器，见[一维的hashlife](https://2o181o28.github.io/2020/03/29/%E4%B8%80%E7%BB%B4%E7%9A%84hashlife/)
+	- fenci/：八年级写的中文分词程序，无需词库，仅Windows下可用；见[Matrix67博客](https://matrix67.com/blog/archives/5044)
+	- fmm/：博一写的快速多极子算法解决一些OI问题的实现，见[FMM入门](https://2o181o28.github.io/2025/10/10/FMM%E5%85%A5%E9%97%A8/)
+	- manorboy/：高一到高二写的各种语言的[男人或男孩测试](https://en.wikipedia.org/wiki/Man_or_boy_test)，free pascal无法通过
+	- matrix/：大一时写的计算相似矩阵的基变换矩阵的垃圾程序，复杂度超高。~~这不是BM就做完了吗~~
+	- pi/：从八年级维护到高二的求π和e的各种方法，速度极快；大学时也加了一点binary splitting的实现，见[π和e的无穷级数计算](https://2o181o28.github.io/2023/06/13/pi%E5%92%8Ce%E7%9A%84%E6%97%A0%E7%A9%B7%E7%BA%A7%E6%95%B0%E8%AE%A1%E7%AE%97/)
+	- queen/：高二写的各种语言的n皇后程序，包含时间测试，见[Rust体验：编写n皇后](https://2o181o28.github.io/2020/05/31/Rust%E4%BD%93%E9%AA%8C/)
+	- randomtext/：高一写的[马尔科夫链生成随机文本](https://2o181o28.github.io/2019/03/08/%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E9%93%BE%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E6%96%87%E6%9C%AC/)，仅Windows下可用
 - GUI/：图形界面程序
-	- windows/：windows下的图形界面程序，全部已弃坑
-		- burningShip/：Burning ship分形
+	- windows/：小学和初中时候写的windows下的图形界面程序
+		- burningShip/：[Burning ship分形](https://en.wikipedia.org/wiki/Burning_Ship_fractal)
 		- connect5-gui/：八年级写的normal/connect5对应的图形界面接口，未完工
 		- sound/：八年级写的pascal简陋音乐播放器
-		- superformula/：九年级写的super formula
-		- winmandel.pas：速度较快的曼德勃罗集绘制程序
-	- graph/：pascal的graph单元，全部已弃坑
+		- superformula/：九年级写的[super formula](https://en.wikipedia.org/wiki/Superformula)
+		- winmandel.pas：小学写的速度较快的曼德勃罗集绘制程序
+	- graph/：pascal的graph单元
 		- connect6/：六年级写的六子棋图形界面，双人对战
-		- draw/：画图
-		- gameoflife/：生命游戏模拟器（暴力实现）
-		- graph of functions/：毕达哥拉斯树、曼德勃罗集、玫瑰线、super formula等公式的绘制
+		- draw/：小学时写的一些绘图程序
+		- gameoflife/：八年级写的生命游戏模拟器（暴力实现）
+		- graph of functions/：初中写的毕达哥拉斯树、曼德勃罗集、玫瑰线、super formula等公式的绘制
 		- mine/：七年级写的支持触摸屏的扫雷
-		- RandomWalkMaps/：随机游走生成地图 + Matrix67的ppmgen + [DLA](https://en.wikipedia.org/wiki/Diffusion-limited_aggregation)
+		- RandomWalkMaps/：九年级写的随机游走生成地图 + Matrix67的ppmgen + [DLA](https://en.wikipedia.org/wiki/Diffusion-limited_aggregation)
 		- tetris/：八年级写的俄罗斯方块
-		- wfc/：高一写的波函数坍缩算法
+		- wfc/：高一写的[波函数坍缩算法](https://2o181o28.github.io/2019/06/27/%E6%B3%A2%E5%87%BD%E6%95%B0%E5%9D%8D%E7%BC%A9%E7%AE%97%E6%B3%95/)
 	- approximate/：各种近似解
-		- kmeans/：kmeans实现用k种颜色近似图片
+		- kmeans/：kmeans实现[用k种颜色近似图片](https://2o181o28.github.io/2020/01/08/%E7%94%A8%E6%9C%89%E9%99%90%E7%A7%8D%E9%A2%9C%E8%89%B2%E9%80%BC%E8%BF%91%E5%8E%9F%E5%9B%BE/)，包括从高二到大三写的一些代码
 		- leastSquare/：九年级写的算法导论上的最小二乘法+伪逆矩阵，用来插值
-		- circlepacking.cpp：折纸中的Circle packing问题，模拟退火
-		- yichuan.pas：七年级写的遗传算法斯坦纳树，已弃坑
-		- logi*.*：单峰映象
+		- circlepacking.cpp：九年级时写的模拟退火解决折纸中的Circle packing问题，见[本博客的第一篇文章](https://2o181o28.github.io/2018/08/03/CirclePacking/)
+		- yichuan.pas：七年级写的遗传算法斯坦纳树
+		- logi*.*：初中时写的，单峰映象
 	- Qt/：高一时写的几个Qt小项目
 		- circlepacking/：old/approximate/circlepacking.cpp的图形界面封装
-		- moire/：Moire Pattern
+		- moire/：[Moire Pattern](https://2o181o28.github.io/2019/03/31/Moire-Pattern/)
 		- PPS/：[PPS system](https://www.youtube.com/watch?v=makaJpLvbow)
 		- resistance/：考虑了空气阻力的自由落体模拟
-- OI/：年久失修的板子库+vEB
+- OI/：当然是我还是OIer的时期写的，年久失修的板子库+vEB
 	- templates/：板子库
 	- vEB/：高一写的模板实现的vEB树
-	- gbst/：树剖、LCT、全局平衡二叉树的对比，包含一些数据
+	- gbst/：树剖、LCT、全局平衡二叉树的对比，包含一些数据，详见[关于全局平衡二叉树等](https://2o181o28.github.io/2020/05/24/%E5%85%A8%E5%B1%80%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/)
 	- *：年代久远已经弃坑

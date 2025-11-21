@@ -4,6 +4,7 @@
 
 目录结构如下：
 - normal/：终端里运行的程序
+	- anatree/：大四时编写的[Anatree](https://en.wikipedia.org/wiki/Anatree)代码
 	- binary_racer/：大二写的用来完成Turing Complete里Binary Racer成就的外挂
 	- connect5/：八年级时写的五子棋AI，无禁手，实力很强
 	- console_games/：游戏
@@ -20,6 +21,11 @@
 	- fmm/：博一写的快速多极子算法解决一些OI问题的实现，见[FMM入门](https://2o181o28.github.io/2025/10/10/FMM%E5%85%A5%E9%97%A8/)
 	- manorboy/：高一到高二写的各种语言的[男人或男孩测试](https://en.wikipedia.org/wiki/Man_or_boy_test)，free pascal无法通过
 	- matrix/：大一时写的计算相似矩阵的基变换矩阵的垃圾程序，复杂度超高。~~这不是BM就做完了吗~~
+	- numerical/：大学时写的一些数值算法
+		- convergence.cpp：大二写的Riemann zeta函数数值计算程序，比较naive求和、[Euler求和](https://en.wikipedia.org/wiki/Euler_summation)、[Aitken求和](https://en.wikipedia.org/wiki/Aitken%27s_delta-squared_process)的收敛速度
+		- hypercomplex.cpp：大三写的[Hypercomplex number](https://en.wikipedia.org/wiki/Hypercomplex_number)计算程序，很有意思的代数结构，可以有任意高维度，还能正常加减乘除；虽然有零因子，但是对随机的输入出现概率极低。不知道为啥实际应用很少。
+		- linear_system.cpp：大三写的各种线性方程组数值求解算法
+		- newton_fractal.cpp：大三写的绘制[牛顿分形](https://en.wikipedia.org/wiki/Newton_fractal)程序
 	- pi/：从八年级维护到高二的求π和e的各种方法，速度极快；大学时也加了一点binary splitting的实现，见[π和e的无穷级数计算](https://2o181o28.github.io/2023/06/13/pi%E5%92%8Ce%E7%9A%84%E6%97%A0%E7%A9%B7%E7%BA%A7%E6%95%B0%E8%AE%A1%E7%AE%97/)
 	- queen/：高二写的各种语言的n皇后程序，包含时间测试，见[Rust体验：编写n皇后](https://2o181o28.github.io/2020/05/31/Rust%E4%BD%93%E9%AA%8C/)
 	- randomtext/：高一写的[马尔科夫链生成随机文本](https://2o181o28.github.io/2019/03/08/%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E9%93%BE%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E6%96%87%E6%9C%AC/)，仅Windows下可用

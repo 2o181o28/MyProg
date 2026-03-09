@@ -48,6 +48,7 @@
 	- approximate/：各种近似解
 		- kmeans/：kmeans实现[用k种颜色近似图片](https://2o181o28.github.io/2020/01/08/%E7%94%A8%E6%9C%89%E9%99%90%E7%A7%8D%E9%A2%9C%E8%89%B2%E9%80%BC%E8%BF%91%E5%8E%9F%E5%9B%BE/)，包括从高二到大三写的一些代码
 		- leastSquare/：九年级写的算法导论上的最小二乘法+伪逆矩阵，用来插值
+		- tendigit/: Ten Digit Problems
 		- circlepacking.cpp：九年级时写的模拟退火解决折纸中的Circle packing问题，见[本博客的第一篇文章](https://2o181o28.github.io/2018/08/03/CirclePacking/)
 		- yichuan.pas：七年级写的遗传算法斯坦纳树
 		- logi*.*：初中时写的，单峰映象
